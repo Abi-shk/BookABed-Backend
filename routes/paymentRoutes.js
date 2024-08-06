@@ -43,8 +43,8 @@ router.post('/create-checkout-session', async (req, res) => {
         quantity: 1 // Quantity of the item
       }],
       mode: 'payment', // One-time payment
-      success_url: 'http://localhost:5173/paymentSuccess', // Redirect URL after successful payment
-      cancel_url: 'http://localhost:5173/', // Redirect URL if payment is canceled
+      success_url: 'https://book-a-bed.vercel.app/paymentSuccess', // Redirect URL after successful payment
+      cancel_url: 'https://book-a-bed.vercel.app/', // Redirect URL if payment is canceled
       metadata: { bookingId: booking._id.toString() } // Store booking ID in metadata
     });
 
